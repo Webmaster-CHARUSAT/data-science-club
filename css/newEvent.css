@@ -1,0 +1,41 @@
+/* Styles for the image container */
+.image-container {
+  text-align: center;
+}
+
+/* Styles for the pop-up */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.popup-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* Styles for the close button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.hoverEffect {
+  color: black;
+  transition: transform 0.2s;
+}
+
+.hoverEffect:hover {
+  transform: scale(1.05);
+}

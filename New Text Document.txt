@@ -1,0 +1,44 @@
+mrudang sir -- industry mentor
+ 
+
+add
+jalpesh sir
+hemant sir
+nirav sir
+
+
+students 
+malav
+harsh
+
+upcoming events--on event page
+pop up on homepage
+
+button at bottom to go on top
+upper index fixed--nav bar
+
+
+------ 2023 -------
+Remake Event Section
+Redirect projects and courses page to coming soon
+Remove previous team images
+Add alumini Section
+Remake navbar
+Fonts style change
+
+
+-- events
+Completed events
+Title
+desc
+no of participants
+expert:
+duration:
+report btn
+   
+
+FONT: "Roboto Slab"
+
+Discord button
+Course index Remove
+course sperate page
