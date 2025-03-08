@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Science Club | Charusat</title>
+    <!--css-->
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/particlestyle.css" rel="stylesheet" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/images/LogoWithoutText.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/newEvent.css" />
+    <!-- <script src="js/teams.js" defer></script> -->
+  </head>
+  <body class="bgcolor">
+    <div class="arrowbtn">
+      <a href="#"><span class="fas fa-angel-up"></span></a>
+    </div>
+
+    <div id="particles-js"></div>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-dark fixed-top"
+      id="navbar"
+    >
+      <div class="container-fluid container d-flex">
+        <a class="navbar-brand font1" style="font-size: 2rem" href="/">
+          <img
+            src="/images/LogoWithoutText.png"
+            width="50px"
+            height="50px"
+            alt="Data Science Club"
+        /></a>
+        <button
+          class="navbar-toggler"
+          s
+          id="navbar-toggler"
+          style="border: none; padding: 0px"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span
+            ><i
+              name="appsicon"
+              class="uil uil-apps dark"
+              style="color: #646eff"
+            ></i
+          ></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end p-0 m-0"
+          id="navbarNav"
+        >
+          <ul
+            class="navbar-nav-mobile d-flex row justify-content-around"
+            id="navbar-mobile"
+          >
+            <div class="col p-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#home"
+                  ><span
+                    class="dark d-flex flex-column justify-content-center align-items-center"
+                    ><i class="uil uil-estate" style="font-size: 1.2rem"></i
+                    >Home</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item me-0 ms-0">
+                <a class="nav-link" href="#courses"
+                  ><span
+                    class="dark d-flex flex-column justify-content-center align-items-center"
+                    ><i class="uil uil-bag" style="font-size: 1.2rem"></i
+                    >Courses</span
+                  ></a
+                >
+              </li>
+            </div>
+
+            <div class="col p-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#about"
+                  ><span
+                    class="dark d-flex flex-column justify-content-center align-items-center"
+                    ><i
+                      class="uil uil-brackets-curly"
+                      style="font-size: 1.2rem"
+                    ></i
+                    >About</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team"
+                  ><span
+                    class="dark d-flex flex-column justify-content-center align-items-center"
+                    ><i
+                      class="uil uil-user-circle"
+                      style="font-size: 1.2rem"
+                    ></i
+                    >Team</span
+                  ></a
+                >
+              </li>
+            </div>
+
+            <div class="col p-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#projects"
+                  ><span
+                    class="dark d-flex flex-column justify-content-center align-items-center"
+                    ><i class="uil uil-file-alt" style="font-size: 1.2rem"></i
+                    >Projects</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#community"
+                  ><span
+                    class="dark d-flex flex-column justify-content-center align-items-center"
+                    ><i class="uil uil-message" style="font-size: 1.2rem"></i
+                    >Community</span
+                  ></a
+                >
+              </li>
+            </div>
+          </ul>
+          <ul class="navbar-nav" id="navbar-navid">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/"
+                ><span class="light-font">Home</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#about"
+                ><span class="light-font">About</span></a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/#projects"
+                ><span class="light-font">Projects</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#courses"
+                ><span class="light-font">Courses</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/events.html"
+                ><span class="light-font">Events</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#team"
+                ><span class="light-font">Team</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#community"
+                ><span class="light-font">Community</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section style="margin-top: 6em">
+      <div class="container">
+        <div class="row flex-row-reverse justify-content-evenly">
+          <div class="col-md-6 d-flex">
+            <div class="row-cols-md-1">
+              <p id="headings" class="font1 h-color">Workshop on LLMs and RAG</p>
+              <p class="paragraphfont" style="word-spacing: -0.1rem">
+                The Data Science Club at Smt. K. D. Patel Department of Information Technology, CSPIT, FTE, CHARUSAT was thrilled to host a Hands-on Workshop on LLMs (Large Language Models) and RAG (Retrieval-Augmented Generation) for Industry Use-Cases on 21st September 2024, from 10:00 AM to 4:00 PM.
+                <br><br>
+                This workshop provided a unique opportunity for AI enthusiasts, data scientists, and professionals to gain practical experience and insights into the latest advancements in AI technologies. The event began with an introduction by the Content Writer of the Data Science Club, followed by expert-led sessions. Participants explored the practical applications of LLMs and RAG, delving into real-world industry use cases.
+                <br><br>
+                The interactive format ensured that attendees not only acquired theoretical knowledge but also gained hands-on experience with relevant tools and techniques.
+                
+
+                <br />
+              </p>
+              <!-- Section under content -->
+              <p class="paragraphfont fw-bolder d-inline">Expert:</p>
+              <br />
+              <p class="paragraphfont d-inline">
+                <b>Amit Parmar:</b> Sr. Data Scientist at NeoSOFT
+                <br />
+              </p>
+              <br />
+              <p class="paragraphfont fw-bolder d-inline">Duration:</p>
+              <p class="paragraphfont d-inline">
+                21st September 2024 from 10am to 4:00pm.
+              </p>
+              <br />
+              <p class="paragraphfont fw-bolder d-inline">
+                No. of Participants:
+              </p>
+              <p class="paragraphfont d-inline">73 students</p>
+              <br />
+              <br />
+              <a
+                href="/images/LLMs and RAG/RAG Report.pdf"
+                target="_blank"
+              >
+                <button type="button" class="btn font1 mt-2 project-btn">
+                  Report PDF<i
+                    class="uil uil-external-link-alt ms-2"
+                    style="font-size: 1.5rem"
+                  ></i>
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex justify-content-center">
+            <div class="image-container">
+              <img
+                class="img-fluid hoverEffect popupEffect"
+                style="border-radius: 16px"
+                src="/images/LLMs and RAG/LLMS and RAG Workshop Poster.jpg"
+                alt="Image Description"
+              />
+              <div id="image-popup" class="popup">
+                <span class="close" id="close-popup">&times;</span>
+                <img class="popup-content" id="popup-image" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Grid  ,for overlay effect refer 2.html  -->
+        <p class="font1 p-0 mt-5 text-center" id="headings">Gallery</p>
+       <div class="row mt-4 flex-row justify-content-start">
+          <div class="col-md-3 col-sm-6 col-auto mb-3">
+            <img
+              class="img-fluid hoverEffect popupEffect"
+              src="/images/LLMs and RAG/IMG_1947.jpg"
+            />
+          </div>
+          <div class="col-md-3 col-sm-6 col-auto mb-3">
+            <img
+              class="img-fluid hoverEffect popupEffect"
+              src="/images/LLMs and RAG/IMG_1953.jpg"
+            />
+          </div>
+          <div class="col-md-3 col-sm-6 col-auto mb-3">
+            <img
+              class="img-fluid hoverEffect popupEffect"
+              src="/images/LLMs and RAG/IMG_1965.jpg"
+            />
+          </div>
+          <div class="col-md-3 col-sm-6 col-auto mb-3">
+            <img
+              class="img-fluid hoverEffect popupEffect"
+              src="/images/LLMs and RAG/IMG_2001.jpg"
+            />
+          </div>
+          <div class="col-md-3 col-sm-6 col-auto mb-3">
+            <img
+              class="img-fluid hoverEffect popupEffect"
+              src="/images/LLMs and RAG/IMG_2003.jpg"
+            />
+          </div>
+        </div>
+      <br>
+      </div>
+    </section>
+
+    <a id="button"></a>
+  </body>
+  <script src="/vendors/particles.js"></script>
+  <script src="/js/event.js"></script>
+  <script src="/vendors/app.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="/js/script.js"></script>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"
+  ></script>
+</html>
