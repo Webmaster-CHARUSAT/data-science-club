@@ -1,147 +1,811 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Science Club | Charusat</title>
-    <!--css-->
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/particlestyle.css" rel="stylesheet" />
-    <!-- CSS only -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
-      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
-      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="images/LogoWithoutText.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i"
-      rel="stylesheet"
-    />
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Team | Data Science Club @ Charusat</title>
+  <meta name="description" content="Meet the dedicated team behind the Data Science Club at Charusat University." />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/particlestyle.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+    integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+    integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" type="image/png" href="images/LogoWithoutText.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet" />
   <style>
-    .hoverCont {
+    /* ── body force dark ── */
+    body {
+      background: transparent !important;
+    }
+
+    /* ── hero ── */
+    .team-page-hero {
+      padding-top: 7rem;
+      padding-bottom: 1.5rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .team-page-hero h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 3rem;
+      color: rgb(134, 226, 111);
+      margin: 0;
+    }
+
+    .team-page-hero p {
+      font-family: "Prompt", sans-serif;
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-top: .4rem;
+    }
+
+    /* ── back link ── */
+    .back-home-bar {
+      padding: .6rem 0 1rem;
+    }
+
+    .back-home-bar a {
+      color: rgb(134, 226, 111);
+      font-family: "Poppins", sans-serif;
+      font-size: .9rem;
+      text-decoration: none;
+      transition: opacity .2s;
+    }
+
+    .back-home-bar a:hover {
+      opacity: .7;
+    }
+
+    /* ── year badge ── */
+    .team-year-section {
+      padding-top: 3rem;
+      padding-bottom: .5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .year-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff855f 0%, #ff5d8e 100%);
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      padding: .35rem 1.4rem;
+      border-radius: 50px;
+      margin-bottom: .4rem;
+      letter-spacing: .05em;
+    }
+
+    .team-year-divider {
+      height: 3px;
+      background: linear-gradient(90deg, #ff855f, transparent);
+      border-radius: 2px;
+      margin-bottom: 2rem;
+    }
+
+    /* ── sub-heading ── */
+    .section_heading {
+      padding-top: 1em;
+      padding-bottom: 1.5em;
+    }
+
+    .section_heading h3 {
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .section_heading h3 span {
+      color: #ff855f;
+    }
+
+    .section_heading .line {
+      width: 60px;
+      height: 3px;
+      background: #ff855f;
+      margin: .4rem auto 0;
+      border-radius: 2px;
+    }
+
+    /* ── coming soon ── */
+    .coming-soon-card {
+      background: rgba(32, 32, 32, .85);
+      border: 2px dashed #ff855f55;
+      border-radius: 15px;
+      padding: 3rem 2rem;
+      text-align: center;
+      color: #aaa;
+      font-family: "Prompt", sans-serif;
+    }
+
+    .coming-soon-card i {
+      font-size: 3rem;
+      color: #ff855f66;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .coming-soon-card h4 {
+      color: #ff855f;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* ── mentor row ── */
+    .mentor-sm {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ff855f66;
+      transition: transform .35s, box-shadow .35s;
+    }
+
+    .mentor-sm:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 22px #ff855f88;
+    }
+
+    #mentors {
+      transition: transform .35s, box-shadow .35s;
+    }
+
+    #mentors:hover {
+      transform: scale(1.06);
+      box-shadow: 0 0 20px #ff855f66;
+    }
+
+    .mentor-block center {
+      padding-bottom: 1.5rem;
+    }
+
+    /* ── carousel wrapper ── */
+    .team-carousel-wrap {
+      padding: 0 .5rem 2rem;
+    }
+
+    /* ── individual card ── */
+    .tc-slide {
+      padding: 0 10px;
+      outline: none;
+    }
+
+    .tc-card {
+      background: rgba(32, 32, 32, .90);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform .35s cubic-bezier(.25, .8, .25, 1), box-shadow .35s;
+      cursor: pointer;
       position: relative;
     }
-    .overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      overflow: hidden;
-      width: 100%;
-      height: 0;
-      /* margin-left: 10px !important; */
-      transition: 0.5s ease;
+
+    .tc-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 18px 40px rgba(255, 133, 95, .25);
     }
-    .hoverCont:hover .overlay {
+
+    .tc-card .tc-img-wrap {
+      position: relative;
+      overflow: hidden;
+      height: 310px;
+      background: #111;
+    }
+
+    .tc-card .tc-img-wrap img {
+      width: 100%;
       height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform .5s ease;
+    }
+
+    .tc-card:hover .tc-img-wrap img {
+      transform: scale(1.08);
+    }
+
+    /* diagonal slash overlay */
+    .tc-card .tc-img-wrap::after {
+      content: "";
+      position: absolute;
+      width: 150%;
+      height: 80px;
+      bottom: -40px;
+      left: -25%;
+      background: rgba(32, 32, 32, .92);
+      transform: rotate(-8deg);
+      transition: background .35s;
+    }
+
+    .tc-card:hover .tc-img-wrap::after {
+      background: rgba(50, 57, 48, .95);
+    }
+
+    /* linkedin icon */
+    .tc-card .tc-social {
+      position: absolute;
+      bottom: 6px;
+      right: 12px;
+      z-index: 2;
+    }
+
+    .tc-card .tc-social a {
+      color: #0d6efd;
+      font-size: 1.4rem;
+      transition: color .2s;
+    }
+
+    .tc-card:hover .tc-social a {
+      color: #fff;
+    }
+
+    /* name / designation */
+    .tc-info {
+      background: rgba(32, 32, 32, .92);
+      padding: 18px 18px 16px;
+      text-align: right;
+      position: relative;
+      transition: background .35s;
+    }
+
+    .tc-info::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 18px;
+      width: 44px;
+      height: 3px;
+      background: #ff855f;
+      border-radius: 2px;
+      transition: background .35s;
+    }
+
+    .tc-card:hover .tc-info {
+      background: rgba(50, 57, 48, .95);
+    }
+
+    .tc-card:hover .tc-info::before {
+      background: #fff;
+    }
+
+    .tc-info h6 {
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      font-size: .95rem;
+      margin: 0;
+      transition: color .3s;
+    }
+
+    .tc-info p {
+      color: #aaa;
+      font-size: .8rem;
+      margin: 0;
+      font-family: "Prompt", sans-serif;
+      transition: color .3s;
+    }
+
+    .tc-card:hover .tc-info h6,
+    .tc-card:hover .tc-info p {
+      color: #fff;
+    }
+
+    /* ── slick arrow override ── */
+    .slick-prev,
+    .slick-next {
+      z-index: 10;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: #ff855f;
+      font-size: 1.4rem;
+    }
+
+    /* ── slick dots ── */
+    .slick-dots li button:before {
+      color: #ff855f;
+      opacity: .4;
+      font-size: 8px;
+    }
+
+    .slick-dots li.slick-active button:before {
+      color: #ff855f;
+      opacity: 1;
+    }
+
+    /* ── mentor section ── */
+    section#team {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* footer z */
+    footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ────────────────────────────────────────────
+         GLOWING SECTION SEPARATORS
+         ──────────────────────────────────────────── */
+    .section-sep {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 3rem 0 2.2rem;
+      z-index: 1;
+    }
+
+    /* left and right glowing lines */
+    .section-sep::before,
+    .section-sep::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      border-radius: 2px;
+    }
+
+    .section-sep::before {
+      background: linear-gradient(90deg, transparent, var(--sep-col));
+    }
+
+    .section-sep::after {
+      background: linear-gradient(270deg, transparent, var(--sep-col));
+    }
+
+    /* floating center badge */
+    .sep-badge {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+      font-family: "Poppins", sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: var(--sep-col);
+      background: #131313;
+      padding: .35rem 1.3rem;
+      border-radius: 50px;
+      border: 1.5px solid var(--sep-col);
+      box-shadow: 0 0 14px var(--sep-glow), inset 0 0 10px rgba(0, 0, 0, .5);
+      white-space: nowrap;
+      margin: 0 1rem;
+      transition: box-shadow .3s;
+    }
+
+    .sep-badge i {
+      font-size: 1rem;
+    }
+
+    .section-sep:hover .sep-badge {
+      box-shadow: 0 0 24px var(--sep-glow), inset 0 0 10px rgba(0, 0, 0, .5);
+    }
+
+    /* colour themes */
+    .sep-orange {
+      --sep-col: #ff855f;
+      --sep-glow: rgba(255, 133, 95, .55);
+    }
+
+    .sep-green {
+      --sep-col: #86e26f;
+      --sep-glow: rgba(134, 226, 111, .50);
+    }
+
+    .sep-purple {
+      --sep-col: #a78bfa;
+      --sep-glow: rgba(167, 139, 250, .50);
+    }
+
+    /* subtle tinted area BELOW each separator (no box — just a background wash) */
+    .section-tint {
+      position: relative;
+      border-radius: 16px;
+      padding: .5rem 0 2rem;
+    }
+
+    .section-tint::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      background: radial-gradient(ellipse at top, var(--tint-col) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .section-tint>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .tint-orange {
+      --tint-col: rgba(255, 133, 95, .04);
+    }
+
+    .tint-green {
+      --tint-col: rgba(134, 226, 111, .04);
+    }
+
+    .tint-purple {
+      --tint-col: rgba(167, 139, 250, .04);
+    }
+
+    /* ── mentor circles ── */
+    .mentor-circle-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .4rem;
+      padding-bottom: .5rem;
+    }
+
+    .mentor-circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 4px solid #ff855f66;
+      box-shadow: 0 0 0 6px rgba(255, 133, 95, .08);
+      transition: transform .35s, box-shadow .35s;
+      display: block;
+    }
+
+    .mentor-circle:hover {
+      transform: scale(1.06);
+      box-shadow: 0 0 0 6px rgba(255, 133, 95, .25), 0 8px 28px rgba(255, 133, 95, .35);
+    }
+
+    .mentor-name {
+      font-family: "Poppins", sans-serif;
+      font-size: .9rem;
+      color: #ff855f;
+      margin: .4rem 0 .1rem;
+    }
+
+    .mentor-role {
+      font-family: "Prompt", sans-serif;
+      font-size: .78rem;
+      color: #ccc;
+      line-height: 1.3;
+    }
+
+    .mentor-li a {
+      color: #0d6efd;
+      font-size: 1.3rem;
+      transition: color .2s;
+    }
+
+    .mentor-li a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 576px) {
+      .mentor-circle {
+        width: 120px;
+        height: 120px;
+      }
+
+      .mentor-circle.mentor-circle-lg {
+        width: 170px;
+        height: 170px;
+      }
+    }
+
+    /* larger variant for bottom row */
+    .mentor-circle.mentor-circle-lg {
+      width: 330px;
+      height: 330px;
     }
   </style>
-  <body class="bgcolor">
-    <div class="container">
-      <div class="row m-4 flex-row justify-content-start">
-        <div class="col-md-3 col-sm-6 col-auto mb-3 hoverCont">
-          <img class="img-fluid image" src="./images/event1.png" />
-          <div
-            class="overlay row flex-row m-0 p-0 text-center align-content-center"
-          >
-            <h1 class="font1">Data Dialogues</h1>
-            <p class="paragraphfont">
-              Paving your way through a thriving career
-            </p>
-            <a href="#" target="_blank">
-              <button type="button" class="btn font1 mt-2 project-btn">
-                Read More<i
-                  class="uil uil-external-link-alt ms-2"
-                  style="font-size: 1.5rem"
-                ></i>
-              </button>
-            </a>
+</head>
+
+<body class="bgcolor">
+  <!-- Same particle bg as homepage -->
+  <div id="particles-js"></div>
+
+  <a id="button"></a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top" id="navbar">
+    <div class="container-fluid container d-flex">
+      <a class="navbar-brand font1" style="font-size:2rem" href="index.html">
+        <img src="images/LogoWithoutText.png" width="50px" height="50px" alt="Data Science Club" /></a>
+      <button class="navbar-toggler" id="navbar-toggler" style="border:none;padding:0px" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span><i name="appsicon" class="uil uil-apps dark" style="color:#646eff"></i></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end p-0 m-0" id="navbarNav">
+        <!-- Mobile nav -->
+        <ul class="navbar-nav-mobile d-flex row justify-content-around" id="navbar-mobile">
+          <div class="col p-0">
+            <li class="nav-item"><a class="nav-link" href="index.html#home"><span
+                  class="dark d-flex flex-column justify-content-center align-items-center"><i class="uil uil-estate"
+                    style="font-size:1.2rem"></i>Home</span></a></li>
+            <li class="nav-item me-0 ms-0"><a class="nav-link" href="index.html#courses"><span
+                  class="dark d-flex flex-column justify-content-center align-items-center"><i class="uil uil-bag"
+                    style="font-size:1.2rem"></i>Courses</span></a></li>
           </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-auto mb-3 hoverCont">
-          <img
-            class="img-fluid hoverEffect popupEffect"
-            src="./images/event2.png"
-          />
-          <div
-            class="overlay row flex-row m-0 p-0 text-center align-content-center"
-          >
-            <h1 class="font1">Data Dialogues</h1>
-            <p class="paragraphfont">
-              Paving your way through a thriving career
-            </p>
-            <a href="#" target="_blank">
-              <button type="button" class="btn font1 mt-2 project-btn">
-                Read More<i
-                  class="uil uil-external-link-alt ms-2"
-                  style="font-size: 1.5rem"
-                ></i>
-              </button>
-            </a>
+          <div class="col p-0">
+            <li class="nav-item"><a class="nav-link" href="index.html#about"><span
+                  class="dark d-flex flex-column justify-content-center align-items-center"><i
+                    class="uil uil-brackets-curly" style="font-size:1.2rem"></i>About</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="teams.html"><span
+                  class="dark d-flex flex-column justify-content-center align-items-center"><i
+                    class="uil uil-user-circle" style="font-size:1.2rem"></i>Team</span></a></li>
           </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-auto mb-3 hoverCont">
-          <img
-            class="img-fluid hoverEffect popupEffect"
-            src="./images/event2.png"
-          />
-          <div
-            class="overlay row flex-row m-0 p-0 text-center align-content-center"
-          >
-            <h1 class="font1">Data Dialogues</h1>
-            <p class="paragraphfont">
-              Paving your way through a thriving career
-            </p>
-            <a href="#" target="_blank">
-              <button type="button" class="btn font1 mt-2 project-btn">
-                Read More<i
-                  class="uil uil-external-link-alt ms-2"
-                  style="font-size: 1.5rem"
-                ></i>
-              </button>
-            </a>
+          <div class="col p-0">
+            <li class="nav-item"><a class="nav-link" href="index.html#projects"><span
+                  class="dark d-flex flex-column justify-content-center align-items-center"><i class="uil uil-file-alt"
+                    style="font-size:1.2rem"></i>Projects</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#community"><span
+                  class="dark d-flex flex-column justify-content-center align-items-center"><i class="uil uil-message"
+                    style="font-size:1.2rem"></i>Community</span></a></li>
           </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-auto mb-3 hoverCont">
-          <img
-            class="img-fluid hoverEffect popupEffect"
-            src="./images/event1.png"
-          />
-        </div>
+        </ul>
+        <!-- Desktop nav -->
+        <ul class="navbar-nav" id="navbar-navid">
+          <li class="nav-item"><a class="nav-link" href="index.html#home"><span class="light-font">Home</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about"><span class="light-font">About</span></a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html#projects"><span
+                class="light-font">Projects</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#courses"><span class="light-font">Courses</span></a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="events.html"><span class="light-font">Events</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="teams.html"><span class="light-font"
+                style="color:#ff855f!important">Team</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#community"><span
+                class="light-font">Community</span></a></li>
+        </ul>
       </div>
     </div>
-  </body>
+  </nav>
+
+  <!-- HERO -->
+  <div class="container team-page-hero">
+    <div class="back-home-bar"><a href="index.html"><i class="uil uil-arrow-left"></i> Back to Home</a></div>
+    <h1>Our Team</h1>
+    <p>The passionate people behind Data Science Club @ Charusat</p>
+  </div>
+
+  <!-- MENTORS -->
+  <section id="team" class="pt-2">
+    <div class="container">
+      <!-- Glowing separator -->
+      <div class="section-sep sep-orange">
+        <span class="sep-badge"><i class="uil uil-book-open"></i> Faculty &amp; Mentors</span>
+      </div>
+      <div class="section-tint tint-orange">
+        <div class="text-center mb-2">
+          <p class="font1 p-0 m-0 h-color" id="headings">Mentors</p>
+          <p class="paragraphfont mb-0">Connect with our Mentors</p>
+        </div>
+        <!-- Mentor grid: 1 on top centred, 2 below side-by-side -->
+
+        <!-- Row 1: Prof. Purvi Prajapati centred -->
+        <div class="row justify-content-center mb-1">
+          <div class="col-auto text-center">
+            <div class="mentor-circle-wrap">
+              <img class="mentor-circle" src="./images/PMP.jpg" alt="Prof. Purvi Prajapati" />
+              <p class="mentor-name mb-0">Prof. Purvi Prajapati</p>
+              <p class="mentor-role">Head Of the Department<br />KDPIT, CHARUSAT</p>
+              <div class="mentor-li">
+                <a href="https://in.linkedin.com/in/purvi-prajapati-7656b449" target="_blank"><i
+                    class="uil uil-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Jalpesh Vasa + Hemant Yadav side by side -->
+        <div class="row justify-content-center" style="gap: 5rem;">
+          <div class="col-auto text-center">
+            <div class="mentor-circle-wrap">
+              <img class="mentor-circle mentor-circle-lg" src="./images/mentor-5.png" alt="Prof. Jalpesh Vasa" />
+              <p class="mentor-name mb-0">Prof. Jalpesh Vasa</p>
+              <p class="mentor-role">Assistant Professor<br />Dept of AIML, CSPIT, CHARUSAT</p>
+              <div class="mentor-li">
+                <a href="https://www.linkedin.com/in/jalpesh-vasa/" target="_blank"><i class="uil uil-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto text-center">
+            <div class="mentor-circle-wrap">
+              <img class="mentor-circle mentor-circle-lg" src="./images/mentor-4.png" alt="Prof. Hemant Yadav" />
+              <p class="mentor-name mb-0">Prof. Hemant Yadav</p>
+              <p class="mentor-role">Assistant Professor<br />KDPIT, CHARUSAT</p>
+              <div class="mentor-li">
+                <a href="https://www.linkedin.com/in/hemantnyadav/" target="_blank"><i class="uil uil-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.section-tint -->
+    </div>
+  </section>
+
+  <!-- TEAM 2025-26 -->
+  <section class="team-year-section">
+    <div class="container">
+      <!-- Glowing separator -->
+      <div class="section-sep sep-green">
+        <span class="sep-badge"><i class="uil uil-users-alt"></i> Team 2025&#8211;26</span>
+      </div>
+      <div class="section-tint tint-green">
+        <div class="section_heading text-center">
+          <h3>Our <span>Team</span></h3>
+          <div class="line"></div>
+        </div>
+        <div class="team-carousel-wrap">
+          <div class="team-carousel" id="memberCarousel"></div>
+        </div>
+
+        <div class="section_heading text-center mt-3">
+          <h3><span>Alumni</span></h3>
+          <div class="line"></div>
+        </div>
+        <div class="team-carousel-wrap">
+          <div class="team-carousel" id="almCarousel"></div>
+        </div>
+      </div><!-- /.section-tint -->
+    </div>
+  </section>
+
+  <!-- TEAM 2026-27 -->
+  <section class="team-year-section pb-5">
+    <div class="container">
+      <!-- Glowing separator -->
+      <div class="section-sep sep-purple">
+        <span class="sep-badge"><i class="uil uil-users-alt"></i> Team 2026&#8211;27</span>
+      </div>
+      <div class="section-tint tint-purple">
+        <div class="section_heading text-center">
+          <h3>Our <span>Team</span></h3>
+          <div class="line"></div>
+        </div>
+        <div class="team-carousel-wrap">
+          <div class="team-carousel" id="memberCarousel2627"></div>
+        </div>
+      </div><!-- /.section-tint -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <center>
+      <div class="dark cngthm font1 p-3">
+        <div class="copyright" style="font-size:.75rem!important">
+          &copy; Copyright <strong><span>Data Science Club @ CHARUSAT</span></strong>. All Rights Reserved
+        </div>
+      </div>
+    </center>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="vendors/particles.js"></script>
+  <script src="vendors/app.js"></script>
+  <script>
+    /* ── Card builder ── */
+    function buildCard(mem) {
+      return '<div class="tc-slide">' +
+        '<div class="tc-card">' +
+        '<div class="tc-img-wrap">' +
+        '<img src="' + mem.img_path + '" alt="' + mem.name + '" />' +
+        '<div class="tc-social"><a href="' + mem.url + '" target="_blank"><i class="uil uil-linkedin"></i></a></div>' +
+        '</div>' +
+        '<div class="tc-info"><h6>' + mem.name + '</h6><p>' + mem.designation + '</p></div>' +
+        '</div>' +
+        '</div>';
+    }
+
+    var teamMembers = [
+      { name: "Rinkal Mav", url: "https://www.linkedin.com/in/rinkal-mav/", img_path: "images/rinkl.png", designation: "Lead" },
+      { name: "Vaidehi Ghodasara", url: "https://www.linkedin.com/in/vaidehi-ghodasara-940aab263/", img_path: "images/vaidehi.png", designation: "Co-Lead" },
+      { name: "Kshitiz Pandya", url: "https://www.linkedin.com/in/kshitiz-pandya/", img_path: "images/kshitij.png", designation: "Tech-Lead" },
+      { name: "Samarth Chauhan", url: "https://www.linkedin.com/in/samarth-chauhan-a4666a257/", img_path: "images/samarth.png", designation: "Technical Team" },
+      { name: "Anmol Chauhan", url: "https://www.linkedin.com/in/anmol-chauhan-1a2b2b233/", img_path: "images/anmol.png", designation: "Technical Team" },
+      { name: "Kirtan Matalia", url: "https://www.linkedin.com/in/kirtan-matalia/", img_path: "images/Kirtan.png", designation: "Technical Team" },
+      { name: "Sneh Shah", url: "https://www.linkedin.com/in/sneh-shah-4a534525a/", img_path: "images/sneh.png", designation: "Web Developer" },
+      { name: "Parshwa Salot", url: "https://www.linkedin.com/in/parshwasalot/", img_path: "images/parshwa.png", designation: "Graphic Designer" },
+      { name: "Jiya Thakkar", url: "https://www.linkedin.com/in/jiya-thakkar-8b3946253/", img_path: "images/jiya.png", designation: "Content Writer" }
+    ];
+
+    var almMembers = [
+      { name: "Zeel Amrutiya", url: "https://www.linkedin.com/in/zeel-amrutiya-5a03b0203/", img_path: "images/lead-1.png", designation: "Founder" },
+      { name: "Aayush Ghadiya", url: "https://www.linkedin.com/in/ayush-ghadiya-8982581a9/", img_path: "images/co-lead-1.png", designation: "Co-Founder" },
+      { name: "Megha Goriya", url: "https://www.linkedin.com/in/megha-goriya-067/", img_path: "images/co-lead-2.png", designation: "Co-Founder" },
+      { name: "Jhanvi Shah", url: "https://www.linkedin.com/in/jhanvi-shah-99b98b165/", img_path: "images/Jhanvi.png", designation: "ML Team" },
+      { name: "Nishit Patel", url: "https://www.linkedin.com/in/nishit-patel03/?originalSubdomain=in", img_path: "images/web-dev-2.png", designation: "Web Developer" },
+      { name: "Shrey Makwana", url: "https://www.linkedin.com/in/shreymakwana4273/", img_path: "images/web-dev-3.png", designation: "Web Developer" },
+      { name: "Vitan Tarpara", url: "https://www.linkedin.com/in/vitantarpara19/", img_path: "images/web-dev-1.png", designation: "Web Developer" },
+      { name: "Omshree Butani", url: "https://www.linkedin.com/in/omshree-butani-51043320a/", img_path: "images/content-writer 1.png", designation: "Content Writer" },
+      { name: "Shrey Navadiya", url: "https://www.linkedin.com/in/shrey-n-34085ba9/", img_path: "images/graphic.png", designation: "Graphic Designer" },
+      { name: "Malav Champaneria", url: "https://www.linkedin.com/in/malav-champaneria-3152b41b6/", img_path: "images/member1.jpg", designation: "Member" },
+      { name: "Jiten Bhalavat", url: "https://www.linkedin.com/in/jiten-bhalavat-812603209/", img_path: "images/member2.jpg", designation: "Member" }
+    ];
+
+    /* inject cards — 2025-26 */
+    var mc = document.getElementById("memberCarousel");
+    teamMembers.forEach(function (m) { mc.innerHTML += buildCard(m); });
+    var ac = document.getElementById("almCarousel");
+    almMembers.forEach(function (m) { ac.innerHTML += buildCard(m); });
+
+    /* ── Team 2026-27 members ── */
+    var teamMembers2627 = [
+      { name: "Italiya Om", url: "https://www.linkedin.com/", img_path: "images/team-2627/Om Italiya-24IT029.jpeg", designation: "Lead" },
+      { name: "Ghevariya Heer", url: "https://www.linkedin.com/", img_path: "images/team-2627/Heer_Ghevariya_24IT025.jpeg", designation: "Co-Lead" },
+      { name: "Goyani Smit", url: "https://www.linkedin.com/", img_path: "images/team-2627/Smit Goyani - 24IT026.png", designation: "Tech Lead" },
+      { name: "Kakadiya Abhi", url: "https://www.linkedin.com/", img_path: "images/team-2627/Abhi-Kakadiya-24IT035.jpg", designation: "Technical Team" },
+      { name: "Gajkandh Nishra", url: "https://www.linkedin.com/", img_path: "images/team-2627/Nishra_Gajkandh-24CE031.jpg", designation: "Technical Team" },
+      { name: "Mavani Parth", url: "https://www.linkedin.com/", img_path: "images/team-2627/Parth Mavani-24It050.png", designation: "Technical Team" },
+      { name: "Vaishnavi Shreeja", url: "https://www.linkedin.com/", img_path: "images/team-2627/Shreeja Vaishnani-24CE138.png", designation: "Technical Team" },
+      { name: "Matieda Parikshit", url: "https://www.linkedin.com/", img_path: "images/team-2627/Parikshit Matieda-24IT049.jpg", designation: "Technical Team" },
+      { name: "Shah Rushit", url: "https://www.linkedin.com/", img_path: "images/team-2627/rushit shah-25ce110.jpg", designation: "Web Developer" },
+      { name: "Parikh Krina", url: "https://www.linkedin.com/", img_path: "images/team-2627/Krina Parikh.jpeg", designation: "Web Developer" },
+      { name: "Babariya Utsav", url: "https://www.linkedin.com/", img_path: "images/team-2627/Utsav_Babariya-24IT003.jpg", designation: "Graphic Designer" },
+      { name: "Nakarani Meet", url: "https://www.linkedin.com/", img_path: "images/team-2627/MEET NAKARANI 24IT053.jpg", designation: "Content Writer" },
+      { name: "Devansh Parikh", url: "https://www.linkedin.com/", img_path: "images/team-2627/Devansh Parikh.jpeg", designation: "Content Writer" },
+      { name: "Priyanshi Gajiwala", url: "https://www.linkedin.com/", img_path: "images/team-2627/Priyanshi Gajiwala.jpeg", designation: "Social Media Manager" }
+    ];
+
+    var mc2627 = document.getElementById("memberCarousel2627");
+    teamMembers2627.forEach(function (m) { mc2627.innerHTML += buildCard(m); });
+
+    /* ── Slick carousel settings ── */
+    var slickOpts = {
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      speed: 320,
+      cssEase: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      pauseOnHover: true,
+      infinite: true,
+      arrows: true,
+      dots: true,
+      rtl: false,
+      responsive: [
+        { breakpoint: 1200, settings: { slidesToShow: 3 } },
+        { breakpoint: 900, settings: { slidesToShow: 2 } },
+        { breakpoint: 600, settings: { slidesToShow: 1, dots: false } }
+      ]
+    };
+
+    /* mentor section is static grid — no carousel needed */
+
+    $(".team-carousel").slick(slickOpts);
+
+    /* ── back-to-top ── */
+    var btn = document.getElementById("button");
+    window.addEventListener("scroll", function () {
+      if (window.pageYOffset > 300) btn.classList.add("show");
+      else btn.classList.remove("show");
+    });
+    btn.addEventListener("click", function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); });
+  </script>
+</body>
+
 </html>
