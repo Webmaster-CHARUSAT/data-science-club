@@ -1,530 +1,308 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Science Club | Charusat</title>
+<html lang="en" class="scroll-smooth">
 
-    <!--css-->
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/particlestyle.css" rel="stylesheet" />
-    <!-- CSS only -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
-      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
-      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="images/LogoWithoutText.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Data Science Club @ CHARUSAT</title>
+    <meta name="description" content="Join our exciting data science events, workshops, and meetups at CHARUSAT.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0f172a',
+                        foreground: '#f8fafc',
+                        card: '#1e293b',
+                        primary: '#f97316',
+                        secondary: '#eab308',
+                        accent: '#334155',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
 
-  <body class="bgcolor">
-    <div class="arrowbtn">
-      <a href="#"><span class="fas fa-angel-up"></span></a>
-    </div>
+<body class="bg-background text-foreground antialiased font-sans">
 
-    <div id="particles-js"></div>
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-dark fixed-top"
-      id="navbar"
-    >
-      <div class="container-fluid container d-flex">
-        <a class="navbar-brand font1" style="font-size: 2rem" href="/">
-          <img
-            src="images/LogoWithoutText.png"
-            width="50px"
-            height="50px"
-            alt="Data Science Club"
-        /></a>
-        <button
-          class="navbar-toggler"
-          s
-          id="navbar-toggler"
-          style="border: none; padding: 0px"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span
-            ><i
-              name="appsicon"
-              class="uil uil-apps dark"
-              style="color: #646eff"
-            ></i
-          ></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end p-0 m-0"
-          id="navbarNav"
-        >
-          <ul
-            class="navbar-nav-mobile d-flex row justify-content-around"
-            id="navbar-mobile"
-          >
-            <div class="col p-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#home"
-                  ><span
-                    class="dark d-flex flex-column justify-content-center align-items-center"
-                    ><i class="uil uil-estate" style="font-size: 1.2rem"></i
-                    >Home</span
-                  ></a
-                > 
-              </li>
-              <li class="nav-item me-0 ms-0">
-                <a class="nav-link" href="#courses"
-                  ><span
-                    class="dark d-flex flex-column justify-content-center align-items-center"
-                    ><i class="uil uil-bag" style="font-size: 1.2rem"></i
-                    >Courses</span
-                  ></a
-                >
-              </li>
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2 fade-in-section no-underline">
+                    <img src="assets/images/logo.png" alt="Data Science Club Logo"
+                        class="w-10 h-10 object-contain hover:scale-110 transition-transform duration-300">
+                    <div class="hidden sm:block">
+                        <div class="text-white font-bold text-lg tracking-tight hover:text-primary transition-colors">
+                            Data Science Club</div>
+                        <div class="text-xs text-slate-400">@ CHARUSAT</div>
+                    </div>
+                </a>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-1 fade-in-section delay-100">
+                    <a href="index.html"
+                        class="nav-link px-4 py-2 rounded-lg text-slate-300 hover:text-white transition-all duration-300 relative group">Home<span
+                            class="absolute bottom-1 left-1/2 w-0 h-0.5 bg-primary group-hover:w-1/2 group-hover:-translate-x-1/2 transition-all duration-300"></span></a>
+                    <a href="about.html"
+                        class="nav-link px-4 py-2 rounded-lg text-slate-300 hover:text-white transition-all duration-300 relative group">About<span
+                            class="absolute bottom-1 left-1/2 w-0 h-0.5 bg-primary group-hover:w-1/2 group-hover:-translate-x-1/2 transition-all duration-300"></span></a>
+                    <a href="events.html"
+                        class="nav-link px-4 py-2 rounded-lg text-slate-300 hover:text-white transition-all duration-300 relative group">Events<span
+                            class="absolute bottom-1 left-1/2 w-0 h-0.5 bg-primary group-hover:w-1/2 group-hover:-translate-x-1/2 transition-all duration-300"></span></a>
+                    <a href="team.html"
+                        class="nav-link px-4 py-2 rounded-lg text-slate-300 hover:text-white transition-all duration-300 relative group">Team<span
+                            class="absolute bottom-1 left-1/2 w-0 h-0.5 bg-primary group-hover:w-1/2 group-hover:-translate-x-1/2 transition-all duration-300"></span></a>
+                    <a href="community.html"
+                        class="nav-link px-4 py-2 rounded-lg text-slate-300 hover:text-white transition-all duration-300 relative group">Community<span
+                            class="absolute bottom-1 left-1/2 w-0 h-0.5 bg-primary group-hover:w-1/2 group-hover:-translate-x-1/2 transition-all duration-300"></span></a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-white hover:bg-white/10">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
-
-            <div class="col p-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#about"
-                  ><span
-                    class="dark d-flex flex-column justify-content-center align-items-center"
-                    ><i
-                      class="uil uil-brackets-curly"
-                      style="font-size: 1.2rem"
-                    ></i
-                    >About</span
-                  ></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#team"
-                  ><span
-                    class="dark d-flex flex-column justify-content-center align-items-center"
-                    ><i
-                      class="uil uil-user-circle"
-                      style="font-size: 1.2rem"
-                    ></i
-                    >Team</span
-                  ></a
-                >
-              </li>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="hidden md:hidden bg-slate-900/95 backdrop-blur-xl border-t border-white/10 absolute left-0 right-0 shadow-2xl">
+                <div class="py-4 space-y-2 px-4">
+                    <a href="index.html"
+                        class="mobile-nav-link block px-4 py-3 text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-colors">Home</a>
+                    <a href="about.html"
+                        class="mobile-nav-link block px-4 py-3 text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-colors">About</a>
+                    <a href="events.html"
+                        class="mobile-nav-link block px-4 py-3 text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-colors">Events</a>
+                    <a href="team.html"
+                        class="mobile-nav-link block px-4 py-3 text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-colors">Team</a>
+                    <a href="community.html"
+                        class="mobile-nav-link block px-4 py-3 text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-colors">Community</a>
+                </div>
             </div>
-
-            <div class="col p-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#projects"
-                  ><span
-                    class="dark d-flex flex-column justify-content-center align-items-center"
-                    ><i class="uil uil-file-alt" style="font-size: 1.2rem"></i
-                    >Projects</span
-                  ></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#community"
-                  ><span
-                    class="dark d-flex flex-column justify-content-center align-items-center"
-                    ><i class="uil uil-message" style="font-size: 1.2rem"></i
-                    >Community</span
-                  ></a
-                >
-              </li>
-            </div>
-          </ul>
-          <ul class="navbar-nav" id="navbar-navid">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/"
-                ><span class="light-font">Home</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/#about"
-                ><span class="light-font">About</span></a
-              >
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="/#projects"
-                ><span class="light-font">Projects</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/#courses"
-                ><span class="light-font">Courses</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href=""
-                ><span class="light-font">Events</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/#team"
-                ><span class="light-font">Team</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/#community"
-                ><span class="light-font">Community</span></a
-              >
-            </li>
-          </ul>
         </div>
-      </div>
     </nav>
 
-    <section id="mission">
-      <div class="contact-imfo-box">
-        <div class="container">
-          <center class="font1" id="headings" style="padding-top: 50px">
-            Upcoming Events
-          </center>
+    <section class="pt-24 pb-0 bg-background relative overflow-hidden">
+        <!-- Background elements -->
+        <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-[100px] pointer-events-none">
+        </div>
+        <div class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-secondary/5 rounded-full blur-[100px] pointer-events-none">
+        </div>
 
-          <!-- <div class="row flex-row-reverse text-center mt-3">
-            <h1 class="font1" id="'headings">
-              Stay tuned for our exciting upcoming events!!
-            </h1>
-          </div> -->
-          
-            
-            
-            <div class="row m-4 flex-row justify-content-around">
-              <div class="col-md-3 col-sm-6 col-auto mb-3 hoverCont">
-                <img
-                  class="img-fluid hoverEffect popupEffect"
-                  src="./images/Trends in Computing Atul Kumar/Atul Kumar Expert Talk.jpg"
-                />
-                <div
-                  class="overlay row flex-row m-0 p-0 text-center align-content-center"
-                >
-                  <h1 class="font1">Trends In Computing</h1>
-                  <p class="paragraphfont">
-                    Paving your way through a thriving career
-                  </p>
-                  <a href="/events/trendsInComputing.html" target="_blank">
-                    <button type="button" class="btn font1 mt-2 project-btn">
-                      Read More<i
-                        class="uil uil-external-link-alt ms-2"
-                        style="font-size: 1.5rem"
-                      ></i>
-                    </button>
-                  </a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12 fade-in-section">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Join Our Events</h1>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto mb-8">Connect, learn, and grow with our community
+                    through exciting workshops and meetups</p>
+            </div>
+
+           
+
+    <!-- Past Events Section -->
+    <section class="pt-0 pb-24 bg-background relative overflow-hidden">
+        <!-- Background elements -->
+        <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-[100px] pointer-events-none">
+        </div>
+        <div class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-secondary/5 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12 fade-in-section">
+                <div class="inline-block">
+                    <span class="px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">PAST
+                        EVENTS</span>
                 </div>
-              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <!-- recent event -->
+               <div class="bg-card rounded-2xl overflow-hidden shadow-lg border border-white/10 hover:border-primary/50 transition-all hover:-translate-y-2 group fade-in-section delay-100 flex flex-col">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="assets/images/Event/Solution%20Challenge%20Hackathon%202026.jpg" alt="Solution Challenge Hackathon 2026" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-4">HANDSON WORKSHOP ON MCP AND A2A</h3>
+                        <div class="space-y-3 text-slate-400 mb-6">
+                            <div class="flex items-center gap-3"><i data-lucide="calendar" class="text-primary w-4 h-4"></i><span class="text-sm">SEPTEMBER 26, 2026</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="clock" class="text-primary w-4 h-4"></i><span class="text-sm">10:00 AM Onwards</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="map-pin" class="text-primary w-4 h-4"></i><span class="text-sm">A7 Building, CHARUSAT</span></div>
+                           
+                        </div>
+                       
+                        <a href="C:\Users\Anuj\Downloads/mcp.jpeg" class="block text-center w-full mt-auto px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-xl font-medium transition-colors shadow-lg shadow-primary/20">View Details</a>
+                    </div>
+                </div>
+              
+                <!-- Past Event 1 - Hackathon 26 -->
+                <div class="bg-card rounded-2xl overflow-hidden shadow-lg border border-white/10 hover:border-primary/50 transition-all hover:-translate-y-2 group fade-in-section delay-100 flex flex-col">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="assets/images/Event/Solution%20Challenge%20Hackathon%202026.jpg" alt="Solution Challenge Hackathon 2026" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-4">Solution Challenge Hackathon 26</h3>
+                        <div class="space-y-3 text-slate-400 mb-6">
+                            <div class="flex items-center gap-3"><i data-lucide="calendar" class="text-primary w-4 h-4"></i><span class="text-sm">March 23-24, 2026</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="clock" class="text-primary w-4 h-4"></i><span class="text-sm">09:30 AM Onwards</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="map-pin" class="text-primary w-4 h-4"></i><span class="text-sm">A7 Building, CHARUSAT</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="users" class="text-primary w-4 h-4"></i><span class="text-sm">Team Size: 1-3</span></div>
+                        </div>
+                        <div class="text-sm text-secondary mb-4 font-medium">
+                            Prizes: ₹7,500 | ₹5,000 | ₹2,500
+                        </div>
+                        <a href="event-solution-challenge-hackathon.html" class="block text-center w-full mt-auto px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-xl font-medium transition-colors shadow-lg shadow-primary/20">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Past Event 2 -->
+                <div
+                    class="bg-card rounded-2xl overflow-hidden shadow-lg border border-white/10 hover:border-primary/50 transition-all hover:-translate-y-2 group fade-in-section delay-200 flex flex-col">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="assets/images/Event/LLMS%20and%20RAG%20Workshop%20Poster.jpg"
+                            alt="Workshop on LLMs and RAG"
+                            class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                            onerror="this.src='https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-4">Workshop on LLMs and RAG</h3>
+                        <div class="space-y-3 text-slate-400 mb-6">
+                            <div class="flex items-center gap-3"><i data-lucide="calendar"
+                                    class="text-primary w-4 h-4"></i><span class="text-sm">September 21, 2024</span>
+                            </div>
+                            <div class="flex items-center gap-3"><i data-lucide="clock"
+                                    class="text-primary w-4 h-4"></i><span class="text-sm">10:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="flex items-center gap-3"><i data-lucide="map-pin"
+                                    class="text-primary w-4 h-4"></i><span class="text-sm">CHARUSAT Campus</span></div>
+                        </div>
+                        <a href="event-llm-rag.html"
+                            class="block text-center w-full mt-auto px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-xl font-medium transition-colors shadow-lg shadow-primary/20">View
+                            Details</a>
+                    </div>
+                </div>
+
+                <!-- Past Event 3 -->
+                <div class="bg-card rounded-2xl overflow-hidden shadow-lg border border-white/10 hover:border-primary/50 transition-all hover:-translate-y-2 group fade-in-section delay-300 flex flex-col">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="assets/images/Event/DataDialogues.png" alt="Data Dialogues" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-4">Data Dialogues: Navigating a Successful Data Science Career</h3>
+                        <div class="space-y-3 text-slate-400 mb-6">
+                            <div class="flex items-center gap-3"><i data-lucide="calendar" class="text-primary w-4 h-4"></i><span class="text-sm">September 10, 2023</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="clock" class="text-primary w-4 h-4"></i><span class="text-sm">10:00 AM - 11:30 AM</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="map-pin" class="text-primary w-4 h-4"></i><span class="text-sm">CHARUSAT Campus</span></div>
+                        </div>
+                        <a href="event-data-dialogues.html" class="block text-center w-full mt-auto px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-xl font-medium transition-colors shadow-lg shadow-primary/20">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Past Event 4 -->
+                <div class="bg-card rounded-2xl overflow-hidden shadow-lg border border-white/10 hover:border-primary/50 transition-all hover:-translate-y-2 group fade-in-section delay-400 flex flex-col">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="assets/images/Event/AWS%20Machine%20learning.png" alt="AWS Machine Learning Workshop" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-4">AWS Machine Learning Workshop</h3>
+                        <div class="space-y-3 text-slate-400 mb-6">
+                            <div class="flex items-center gap-3"><i data-lucide="calendar" class="text-primary w-4 h-4"></i><span class="text-sm">Jan 30 - Feb 4, 2023</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="clock" class="text-primary w-4 h-4"></i><span class="text-sm">Full Week</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="map-pin" class="text-primary w-4 h-4"></i><span class="text-sm">CHARUSAT Campus</span></div>
+                        </div>
+                        <a href="event-aws-ml.html" class="block text-center w-full mt-auto px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-xl font-medium transition-colors shadow-lg shadow-primary/20">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Past Event 5 -->
+                <div class="bg-card rounded-2xl overflow-hidden shadow-lg border border-white/10 hover:border-primary/50 transition-all hover:-translate-y-2 group fade-in-section delay-500 flex flex-col">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="assets/images/Event/Shaping%20Career%20Poster.png" alt="Shaping your Career" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-4">Shaping your Career</h3>
+                        <div class="space-y-3 text-slate-400 mb-6">
+                            <div class="flex items-center gap-3"><i data-lucide="calendar" class="text-primary w-4 h-4"></i><span class="text-sm">October 14, 2022</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="clock" class="text-primary w-4 h-4"></i><span class="text-sm">2:00 PM - 4:00 PM</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="map-pin" class="text-primary w-4 h-4"></i><span class="text-sm">CHARUSAT Campus</span></div>
+                        </div>
+                        <a href="event-shaping-career.html" class="block text-center w-full mt-auto px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-xl font-medium transition-colors shadow-lg shadow-primary/20">View Details</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section>
-      <div class="">
-        <div class="container">
-          <center class="font1" id="headings">Completed Events</center>
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-white pt-16 pb-8 border-t border-white/10 relative overflow-hidden">
+        <div class="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
+            <div class="absolute -bottom-1/4 -left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px]"></div>
+            <div class="absolute -bottom-1/4 -right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[100px]"></div>
         </div>
-        
-        <div class="row m-4 flex-row justify-content-around">
-          <div class="col-md-3 col-sm-6 col-auto mb-3 hoverCont">
-            <img
-              class="img-fluid hoverEffect popupEffect"
-              src="./images/LLMs and RAG/LLMS and RAG Workshop Poster.jpg"
-            />
-            <div
-              class="overlay row flex-row m-0 p-0 text-center align-content-center"
-            >
-              <h1 class="font1">LLMs & RAG</h1>
-              <p class="paragraphfont">
-                Paving your way through a thriving career
-              </p>
-              <a href="/events/llmsandrag.html" target="_blank">
-                <button type="button" class="btn font1 mt-2 project-btn">
-                  Read More<i
-                    class="uil uil-external-link-alt ms-2"
-                    style="font-size: 1.5rem"
-                  ></i>
-                </button>
-              </a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <img src="assets/images/logo.png" alt="Data Science Club Logo" class="w-10 h-10 object-contain">
+                        <div>
+                            <div class="font-bold text-xl tracking-tight">Data Science Club</div>
+                            <div class="text-xs text-slate-400">@ CHARUSAT</div>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 mb-6 max-w-md">Join with us to learn and explore the vast field of data
+                        science and opportunities. Cultivating an environment that supports continuous learning,
+                        networking, and knowledge sharing.</p>
+                    <div class="flex space-x-4">
+                        <!-- TODO: Update WHATSAPP COMMUNITY URL Above here -->
+                        <a href="https://www.linkedin.com/in/data-science-club-charusat-038449233/" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all"><i
+                                data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="https://www.instagram.com/datascienceclub.charusat/" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all"><i
+                                data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="https://chat.whatsapp.com/GPBcOYydevIHpyIudy6DYq" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all"
+                            title="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg></a>
+                        <a href="mailto:dasciclub@charusat.ac.in"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all"><i
+                                data-lucide="mail" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Get in Touch</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3 text-slate-400"><i data-lucide="map-pin"
+                                class="w-5 h-5 mt-1 text-primary"></i><span>Charotar University of Science and
+                                Technology (CHARUSAT), Changa - 388421, Gujarat, India</span></div>
+                        <div class="flex items-center space-x-3 text-slate-400"><i data-lucide="mail"
+                                class="w-5 h-5 text-primary"></i><a href="mailto:dasciclub@charusat.ac.in"
+                                class="hover:text-white transition-colors">dasciclub@charusat.ac.in</a></div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-auto mb-3 hoverCont">
-            <img
-              class="img-fluid hoverEffect popupEffect"
-              src="./images/Data Dialogues/DataDialogues.png"
-            />
-            <div
-              class="overlay row flex-row m-0 p-0 text-center align-content-center"
-            >
-              <h1 class="font1">Data Dialogues</h1>
-              <p class="paragraphfont">
-                Paving your way through a thriving career
-              </p>
-              <a href="/events/dataDialogues.html" target="_blank">
-                <button type="button" class="btn font1 mt-2 project-btn">
-                  Read More<i
-                    class="uil uil-external-link-alt ms-2"
-                    style="font-size: 1.5rem"
-                  ></i>
-                </button>
-              </a>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-500 text-sm mb-4 md:mb-0">© <span id="current-year"></span> Data Science Club @
+                    CHARUSAT.</p>
+                <div class="flex space-x-6 text-sm text-slate-500">
+                    <p>All rights reserved.</p>
+                </div>
             </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-auto mb-3 hoverCont">
-            <img
-              class="img-fluid hoverEffect popupEffect"
-              src="./images/AWS workshop/AWS Machine learning.png"
-            />
-            <div
-              class="overlay row flex-row m-0 p-0 text-center align-content-center"
-            >
-              <h1 class="font1">AWS Workshop</h1>
-              <p class="paragraphfont">
-                Paving your way through a thriving career
-              </p>
-              <a href="/events/awsWorkshop.html" target="_blank">
-                <button type="button" class="btn font1 mt-2 project-btn">
-                  Read More<i
-                    class="uil uil-external-link-alt ms-2"
-                    style="font-size: 1.5rem"
-                  ></i>
-                </button>
-              </a>
-            </div>
-          </div>
-          
         </div>
-        <div class="row m-4 flex-row justify-content-around">
-          <div class="col-md-3 col-sm-6 mb-3 hoverCont">
-            <img
-              class="img-fluid hoverEffect popupEffect"
-              src="./images/event2.png"
-            />
-            <div
-              class="overlay row flex-row m-0 p-0 text-center align-content-center"
-            >
-              <h1 class="font1">Shaping Career</h1>
-              <p class="paragraphfont">
-                Paving your way through a thriving career
-              </p>
-              <a href="/events/shapingCareer.html" target="_blank">
-                <button type="button" class="btn font1 mt-2 project-btn">
-                  Read More<i
-                    class="uil uil-external-link-alt ms-2"
-                    style="font-size: 1.5rem"
-                  ></i>
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-   <div class="space_lg">&nbsp;</div>
-    <section id="getintouch">
-      <center>
-        <div class="skewed"></div>
-        <div class="container">
-          <div class="wave"></div>
-          <div class="row gy-2 justify-content-center">
-            <div id="headings" class="col-md-12">
-              <h1 class="font1" style="color: #86e26f">Get in Touch</h1>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-md-12">
-              <ul class="communitylist">
-                <li>
-                  <h3>
-                    Don't forgot to contact us @
-                    <a
-                      style="text-decoration: none; color: #86e26f"
-                      href="mailto:dasciclub@charusat.ac.in"
-                      >dasciclub@charusat.ac.in</a
-                    >
-                    in case of any Queries!
-                  </h3>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </center>
-    </section>
-
-    <!-- Back to top button -->
-
-    <a id="button"></a>
-
-    <!-- scripts -->
-    <footer>
-      <center>
-        <div class="dark cngthm font1 p-3">
-          <div class="copyright" style="font-size: 0.75rem !important">
-            &copy; Copyright
-            <strong><span>Data Science Club @ CHARUSAT</span></strong
-            >. All Rights Reserved
-          </div>
-        </div>
-      </center>
     </footer>
 
-    <script src="js/script.js"></script>
-    <script src="vendors/particles.js"></script>
-    <script src="vendors/app.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script type="text/javascript">
-      $(".responsive").slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        dots: true,
-        variableWidth: false,
-        autoplay: true,
-        autoplaySpeed: 1000,
-        responsive: [
-          {
-            breakpoint: 1200,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: true,
-            },
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              arrows: false,
-            },
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              arrows: false,
-            },
-          },
-          // You can unslick at a given breakpoint now by adding:
-          // settings: "unslick"
-          // instead of a settings object
-        ],
-      });
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
 
-      var btn = $("#button");
-      $(window).scroll(function () {
-        if ($(window).scrollTop() > 300) {
-          btn.addClass("show");
-        } else {
-          btn.removeClass("show");
-        }
-      });
-
-      window.onscroll = function () {
-        myFunction();
-      };
-
-      var navlist = document.getElementById("navbar-toggler");
-      var sticky = navlist.offsetTop;
-
-      /* Function to stick the nav bar */
-      function myFunction() {
-        if (window.pageYOffset >= sticky) {
-          navlist.classList.add("sticky");
-        } else {
-          navlist.classList.remove("sticky");
-        }
-      }
-
-      btn.on("click", function (e) {
-        e.preventDefault();
-        $("html, body").animate({ scrollTop: 0 }, "300");
-      });
-    </script>
-    <!-- JavaScript Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-  </body>
 </html>
-
-<!-- 
-  <div class="row flex-row-reverse justify-content-evenly mt-3">
-  <div class="col-md-8 d-flex">
-              <div class="row-cols-md-1">
-                <p id="headings" class="font1 text-center h-color">
-                  Machine Learning Using AWS
-                </p>
-                <p class="paragraphfont" style="word-spacing: -0.1rem">
-                  The Data Science Club's primary objective is to unify colleges
-                  across the country that want to promote Data Science as a
-                  desirable career path to their students by getting them to
-                  join our revolutionary career-oriented corporate club.<br />
-                </p>
-
-                <a href="#" target="_blank">
-                  <button type="button" class="btn font1 mt-2 project-btn">
-                    Report PDF<i
-                      class="uil uil-external-link-alt ms-2"
-                      style="font-size: 1.5rem"
-                    ></i>
-                  </button>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-md-3 d-flex justify-content-center">
-              <div class="image-container">
-                <img
-                  class="img-fluid hoverEffect popupEffect"
-                  style="border-radius: 16px"
-                  src="./images/event1.png"
-                  alt="Image Description"
-                />
-              </div>
-            </div>
-            </div>
- -->
