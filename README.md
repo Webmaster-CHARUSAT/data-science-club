@@ -2,6 +2,9 @@
 
 > **Live site:** [datascienceclub.charusat.ac.in](https://datascienceclub.charusat.ac.in)
 
+This is the static website for the Data Science Club at CHARUSAT. It is
+hosted on GitHub Pages and does not require a build step.
+
 ---
 
 ## Folder Structure
@@ -14,7 +17,7 @@ data-science-club/
 │   ├── events.html             # Events listing (upcoming + completed)
 │   ├── course.html             # Courses page
 │   ├── projects.html           # Projects page
-│   └── legacy/                 # Archived drafts and old redirect stubs
+│   └── legacy/                 # Unused archived drafts and old redirects
 │
 ├── events/                     # Individual event detail pages
 │   ├── awsWorkshop.html        # AWS Machine Learning Workshop
@@ -51,9 +54,12 @@ data-science-club/
 │
 ├── CNAME                       # GitHub Pages custom domain config
 ├── LICENSE                     # MIT License
-│
-└── ...
+└── README.md                  # Project documentation
 ```
+
+The repository root intentionally contains only the home page, configuration,
+licensing, and documentation. Do not add feature pages or event pages to the
+root.
 
 ---
 
@@ -65,7 +71,8 @@ data-science-club/
 | `pages/` subfolder | `../css/style.css`, `../js/script.js`, `../images/...` |
 | `events/` subfolder | `/css/style.css`, `/js/script.js`, `/images/...` (absolute) |
 
-> **Note:** Event pages use absolute paths (`/css/`, `/js/`) to work correctly with the web server root.
+> **Note:** Event pages use root-relative paths (`/css/`, `/js/`, and
+> `/images/`) so they work correctly when hosted from the site root.
 
 ---
 
@@ -84,15 +91,54 @@ data-science-club/
 
 ## Development Notes
 
-- **No build step** — pure static HTML/CSS/JS, deploy by pushing to GitHub
-- **GitHub Pages** with custom domain via `CNAME`
-- Event nav links in all pages point to `/pages/events.html`
-- Home page navbar links to `pages/events.html` (relative from root)
-- The `#headings` ID was migrated to `.section-heading` class; both are styled in `css/style.css`
-- Add every new event detail page directly under `events/` with one descriptive,
-  lowercase camel-case filename (for example, `pythonWorkshop.html`).
-- Keep event-specific posters, galleries, and reports together under a matching
-  folder in `images/`; link those assets from the event page with root-relative
-  paths such as `/images/python-workshop/...`.
-- Keep the repository root limited to the home page, configuration, licensing,
-  and documentation. Archived HTML stubs belong in `pages/legacy/`.
+- **No build step:** this is a static HTML/CSS/JavaScript site.
+- **Deployment:** push changes to the GitHub Pages branch.
+- **Custom domain:** configured through `CNAME`.
+- **Canonical navigation:** use `/pages/events.html`, `/pages/course.html`,
+  and `/pages/projects.html`.
+- **Legacy pages:** files in `pages/legacy/` are not used by the active site.
+  They are retained only as historical references and old redirect stubs.
+  Do not link to them or add new files there.
+
+## Running locally
+
+Because the site uses root-relative paths such as `/css/` and `/images/`, run
+it through a local web server instead of opening `index.html` directly.
+
+### Option 1: Python
+
+1. Open a terminal in the repository root.
+2. Start a local server:
+
+   ```bash
+   python -m http.server 8000
+   ```
+
+3. Open [http://localhost:8000](http://localhost:8000) in a browser.
+4. Stop the server with `Ctrl+C`.
+
+If `python` is not recognized on Windows, try:
+
+```bash
+py -m http.server 8000
+```
+
+### Option 2: VS Code Live Server
+
+1. Install the **Live Server** extension in VS Code.
+2. Open the repository folder in VS Code.
+3. Right-click `index.html` and select **Open with Live Server**.
+4. The site will open in your browser with a local address, usually
+   `http://127.0.0.1:5500`.
+
+## Adding an event
+
+1. Create one descriptive, lowercase camel-case detail page directly under
+   `events/`, such as `pythonWorkshop.html`.
+2. Create a matching folder under `images/` for the event poster, gallery, and
+   report, such as `images/python-workshop/`.
+3. Use root-relative asset paths such as
+   `/images/python-workshop/python-workshop-poster.png`.
+4. Add the event card and link to `pages/events.html`.
+5. Keep only one canonical detail page for each event; do not create numbered
+   or alternate copies.
