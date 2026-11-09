@@ -13,17 +13,17 @@ data-science-club/
 ├── pages/                      # Full-page subpages
 │   ├── events.html             # Events listing (upcoming + completed)
 │   ├── course.html             # Courses page
-│   └── projects.html           # Projects page
+│   ├── projects.html           # Projects page
+│   └── legacy/                 # Archived drafts and old redirect stubs
 │
 ├── events/                     # Individual event detail pages
 │   ├── awsWorkshop.html        # AWS Machine Learning Workshop
-│   ├── awsWorkshop2.html       # AWS Workshop (alternate layout)
 │   ├── dataDialogues.html      # Data Dialogues event
-│   ├── dataDialogues2.html     # Data Dialogues (alternate layout)
 │   ├── expertSession.html      # Expert Session (Rajeev Kanth)
 │   ├── llmsandrag.html         # LLMs & RAG Workshop
 │   ├── shapingCareer.html      # Shaping Career event
-│   └── trendsInComputing.html  # Trends in Computing event
+│   ├── trendsInComputing.html  # Trends in Computing event
+│   └── README.md               # Event page naming and asset conventions
 │
 ├── css/
 │   ├── style.css               # Main stylesheet
@@ -52,17 +52,7 @@ data-science-club/
 ├── CNAME                       # GitHub Pages custom domain config
 ├── LICENSE                     # MIT License
 │
-│── Redirect stubs (safe to ignore — keep for backward compatibility):
-├── events.html                 # → /pages/events.html
-├── course.html                 # → /pages/course.html
-├── courses.html                # → /pages/course.html
-├── projects.html               # → /pages/projects.html
-├── newEvent1.html              # → /events/awsWorkshop2.html
-├── newEvent2.html              # → /events/dataDialogues2.html
-├── newEvent3.html              # → /events/expertSession.html
-├── 2.html                      # → / (dev prototype, stubbed)
-├── 3.html                      # → /pages/course.html (old draft, stubbed)
-└── teams.html                  # → / (dev draft, stubbed)
+└── ...
 ```
 
 ---
@@ -99,3 +89,10 @@ data-science-club/
 - Event nav links in all pages point to `/pages/events.html`
 - Home page navbar links to `pages/events.html` (relative from root)
 - The `#headings` ID was migrated to `.section-heading` class; both are styled in `css/style.css`
+- Add every new event detail page directly under `events/` with one descriptive,
+  lowercase camel-case filename (for example, `pythonWorkshop.html`).
+- Keep event-specific posters, galleries, and reports together under a matching
+  folder in `images/`; link those assets from the event page with root-relative
+  paths such as `/images/python-workshop/...`.
+- Keep the repository root limited to the home page, configuration, licensing,
+  and documentation. Archived HTML stubs belong in `pages/legacy/`.
