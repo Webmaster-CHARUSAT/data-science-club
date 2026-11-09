@@ -56,7 +56,6 @@
         /></a>
         <button
           class="navbar-toggler"
-          s
           id="navbar-toggler"
           style="border: none; padding: 0px"
           type="button"
@@ -174,7 +173,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/events.html"
+              <a class="nav-link" href="/pages/events.html"
                 ><span class="light-font">Events</span></a
               >
             </li>
@@ -197,7 +196,7 @@
         <div class="row flex-row-reverse justify-content-evenly">
           <div class="col-md-6 d-flex">
             <div class="row-cols-md-1">
-              <p id="headings" class="font1 h-color">Workshop on LLMs and RAG</p>
+              <p class="section-heading font1 h-color">Workshop on LLMs and RAG</p>
               <p class="paragraphfont" style="word-spacing: -0.1rem">
                 The Data Science Club at Smt. K. D. Patel Department of Information Technology, CSPIT, FTE, CHARUSAT was thrilled to host a Hands-on Workshop on LLMs (Large Language Models) and RAG (Retrieval-Augmented Generation) for Industry Use-Cases on 21st September 2024, from 10:00 AM to 4:00 PM.
                 <br><br>
@@ -257,7 +256,7 @@
           </div>
         </div>
         <!-- Grid  ,for overlay effect refer 2.html  -->
-        <p class="font1 p-0 mt-5 text-center" id="headings">Gallery</p>
+        <p class="font1 p-0 mt-5 text-center section-heading">Gallery</p>
        <div class="row mt-4 flex-row justify-content-start">
           <div class="col-md-3 col-sm-6 col-auto mb-3">
             <img
@@ -294,11 +293,20 @@
       </div>
     </section>
 
+    <footer>
+      <center>
+        <div class="dark cngthm font1 p-3">
+          <div class="copyright" style="font-size: 0.75rem !important">
+            &copy; Copyright
+            <strong><span>Data Science Club @ CHARUSAT</span></strong
+            >. All Rights Reserved
+          </div>
+        </div>
+      </center>
+    </footer>
     <a id="button"></a>
   </body>
-  <script src="/vendors/particles.js"></script>
-  <script src="/js/event.js"></script>
-  <script src="/vendors/app.js"></script>
+  <!-- Load jQuery first, then Slick, then custom scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
@@ -306,8 +314,10 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   ></script>
+  <script src="/vendors/particles.js"></script>
+  <script src="/vendors/app.js"></script>
+  <script src="/js/event.js"></script>
   <script src="/js/script.js"></script>
-
   <!-- JavaScript Bundle with Popper -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

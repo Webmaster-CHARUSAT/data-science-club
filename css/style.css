@@ -76,7 +76,8 @@ body::-webkit-scrollbar-thumb {
   margin-right: 10%;
 }
 
-#headings {
+#headings,
+.section-heading {
   color: rgb(134, 226, 111);
 }
 
