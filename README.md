@@ -44,13 +44,11 @@ data-science-club/
 │   └── app.js                  # Particle config
 │
 ├── images/                     # All site images
-│   ├── LogoWithoutText.png     # Club logo (favicon + navbar)
-│   ├── AWS workshop/           # AWS Workshop photos
-│   ├── Data Dialogues/         # Data Dialogues photos
-│   ├── LLMs and RAG/           # LLMs & RAG Workshop photos
-│   ├── Rajeev kanth event/     # Expert Session photos
-│   ├── Trends in Computing Atul Kumar/
-│   └── ...
+│   ├── club logo/              # Club logo (favicon + navbar)
+│   ├── faculty image/          # Faculty coordinator portraits
+│   ├── team/Previous team/     # Previous team portraits
+│   ├── events/                 # Event posters, photos, and reports
+│   └── site/                   # Shared site illustrations
 │
 ├── CNAME                       # GitHub Pages custom domain config
 ├── LICENSE                     # MIT License
@@ -135,10 +133,10 @@ py -m http.server 8000
 
 1. Create one descriptive, lowercase camel-case detail page directly under
    `events/`, such as `pythonWorkshop.html`.
-2. Create a matching folder under `images/` for the event poster, gallery, and
-   report, such as `images/python-workshop/`.
+2. Create a matching folder under `images/events/` for the event poster,
+   gallery, and report, such as `images/events/python-workshop/`.
 3. Use root-relative asset paths such as
-   `/images/python-workshop/python-workshop-poster.png`.
+   `/images/events/python-workshop/python-workshop-poster.png`.
 4. Add the event card and link to `pages/events.html`.
 5. Keep only one canonical detail page for each event; do not create numbered
    or alternate copies.

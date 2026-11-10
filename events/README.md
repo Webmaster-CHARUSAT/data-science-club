@@ -11,7 +11,7 @@ new event.
    `pythonWorkshop.html`.
 3. Keep the event's poster, gallery, and report in a matching folder under
    `../images/`.
-4. Use root-relative asset paths (`/images/...`, `/css/...`, `/js/...`) so the
+4. Use root-relative asset paths (`/images/events/...`, `/css/...`, `/js/...`) so the
    page works when hosted on GitHub Pages.
 5. Add the page link and poster to `../pages/events.html`.
 
